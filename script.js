@@ -6,14 +6,15 @@ const userWord = prompt("Inserisci una parola", "otto");
 
 function isPalindromaWord(word){
 
-    let wordContainer = word;
-    let reversedWord = wordContainer.reverse();
+    let splitWord = word.split("");
+    console.log(splitWord);
 
-    if (wordContainer = reversedWord){
-        return true;
-    }else{
-        return false
-    }
+    let reversedWord = splitWord.reverse();
+    console.log(reversedWord);
+
+    let result = splitWord.toString === reversedWord.toString ? true : false;
+
+    return result;
 }
 
 console.log(isPalindromaWord(userWord));
