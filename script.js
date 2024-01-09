@@ -32,13 +32,18 @@ console.log(isPalindromaWord(userWord));
  - sommiamo i 2 numeri
  - verifichiamo se la somma dei due numeri è pari o dispari
  - dichiariamo il vincitore in console
-
-
-
-
-
-
 */
+
+
+const OddOrEven = prompt("Pari o Dispari?", "Pari")
+
+let OddOrEvenValidator = OddOrEven === "pari" && OddOrEven === "dispari" ? true : false;
+
+if (OddOrEvenValidator = false) {
+    console.log("il numero è sbagliato")
+}
+
+
 
 
 
