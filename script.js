@@ -36,7 +36,11 @@
 
 
 const userChoice = prompt("Pari o Dispari?", "Pari");
+console.log(userChoice);
+
+
 const userNum = prompt("Inserisci un numero da 1 a 5", "3");
+console.log(userNum);
 
 if (userChoice !== "Pari" && userChoice !== "Dispari"){
     console.log("Hai sbagliato. Scegli se pari o dispari");
@@ -51,7 +55,7 @@ if (userChoice !== "Pari" && userChoice !== "Dispari"){
         console.log("RandomNum = " + randomNum);
 
 
-        let sum = randomNum + num;
+        let sum = randomNum + parseInt(num);
         console.log("Sum = " + sum);
 
         return sum;
@@ -59,15 +63,27 @@ if (userChoice !== "Pari" && userChoice !== "Dispari"){
     }
 
     function isEven(){
+        let finalResult;
 
         if (getRandomNumber(userNum) % 2 == 0){
             console.log("IL numero è pari");
+            finalResult = "Pari";
         } else{
             console.log("IL numero è dispari");
+            finalResult = "Dispari";
         }
+
+        return finalResult;
     }
 
-    isEven();
+
+    if (isEven() == userNum){
+        console.log("Hai vinto!")
+    } else{
+        console.log("Hai perso");
+    }
+
+
 
 
 
@@ -76,21 +92,6 @@ if (userChoice !== "Pari" && userChoice !== "Dispari"){
 }
 
 
-
-
-
-
-
-
-// let OddOrEvenValidator = userChoice == "pari" && userChoice == "dispari" ? true : false;
-
-// console.log(OddOrEvenValidator);
-
-
-// if (OddOrEvenValidator = false) {
-//     console.log("il numero è sbagliato");
-    
-// }
 
 
 
